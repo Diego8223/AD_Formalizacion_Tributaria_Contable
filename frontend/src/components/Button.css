@@ -1,0 +1,45 @@
+/* Botón base */
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Variantes de color */
+.btn-primary {
+  background-color: #2563eb; /* Azul */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af; /* Azul más oscuro */
+}
+
+.btn-secondary {
+  background-color: #4b5563; /* Gris */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #374151; /* Gris más oscuro */
+}
+
+.btn-danger {
+  background-color: #dc2626; /* Rojo */
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c; /* Rojo más oscuro */
+}
+
+.btn-success {
+  background-color: #16a34a; /* Verde */
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #15803d; /* Verde más oscuro */
+}

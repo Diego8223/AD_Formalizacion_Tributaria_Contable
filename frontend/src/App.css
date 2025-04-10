@@ -1,0 +1,246 @@
+/* Reset general */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Logos separados */
+.logo-main {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo-main:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo-react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo-nav {
+  width: 84px;
+  height: 84px;
+  margin-right: 10px;
+}
+
+/* Animación opcional */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-animated {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Contenedor formulario */
+.form-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta de formulario */
+.card-custom {
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Inputs (puedes usar clases Bootstrap también: form-control) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Botón (usa btn btn-primary si usas Bootstrap) */
+button.custom-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.custom-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes de estado */
+.text-red-500 {
+  color: #f87171;
+}
+
+.text-green-500 {
+  color: #22c55e;
+}
+
+/* Navbar personalizado */
+.navbar-custom {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Enlaces de navegación */
+.menu-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #93c5fd;
+}
+
+.menu-link.text-green-300 { color: #86efac; }
+.menu-link.text-green-300:hover { color: #bbf7d0; }
+
+.menu-link.text-blue-300 { color: #93c5fd; }
+.menu-link.text-blue-300:hover { color: #bfdbfe; }
+
+.menu-link.text-red-300 {
+  color: #fca5a5;
+  cursor: pointer;
+}
+.menu-link.text-red-300:hover {
+  color: #fecaca;
+}
+
+/* Botón hamburguesa solo visible en móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background-color: #f8fafc;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu.open {
+  max-height: 400px;
+}
+
+.mobile-link {
+  display: block;
+  padding: 14px;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-link:hover {
+  background-color: #e0f2fe;
+}
+
+.mobile-link.text-red-500 {
+  color: #ef4444;
+  cursor: pointer;
+}
+.mobile-link.text-red-500:hover {
+  background-color: #fee2e2;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .menu-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .card-custom {
+    padding: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  button.custom-btn {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+}

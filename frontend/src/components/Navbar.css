@@ -1,0 +1,162 @@
+/* Estilos generales */
+.navbar-custom {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Logo + nombre */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  width: 84px;
+  height: 84px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+/* Menú enlaces desktop */
+.menu-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #93c5fd;
+}
+
+/* Estilos específicos para botones */
+.menu-link.text-green-300 {
+  color: #86efac;
+}
+.menu-link.text-green-300:hover {
+  color: #bbf7d0;
+}
+
+.menu-link.text-blue-300 {
+  color: #93c5fd;
+}
+.menu-link.text-blue-300:hover {
+  color: #bfdbfe;
+}
+
+.menu-link.text-red-300 {
+  color: #fca5a5;
+  cursor: pointer;
+}
+.menu-link.text-red-300:hover {
+  color: #fecaca;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #f8fafc;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu.open {
+  max-height: 500px;
+}
+
+.mobile-link {
+  display: block;
+  padding: 14px;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-link:hover {
+  background-color: #e0f2fe;
+}
+
+/* Cerrar sesión en móvil */
+.mobile-link.text-red-500 {
+  color: #ef4444;
+  cursor: pointer;
+}
+.mobile-link.text-red-500:hover {
+  background-color: #fee2e2;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 10px;
+  }
+
+  .menu-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .mobile-link {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+}
