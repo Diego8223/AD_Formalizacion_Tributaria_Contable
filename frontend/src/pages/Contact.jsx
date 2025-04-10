@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-// Importa las imágenes correctamente desde src/assets
 import logo12 from "../assets/logo12.jpg";
 import logo13 from "../assets/logo13.jpg";
 import logo14 from "../assets/logo14.jpg";
@@ -70,7 +69,7 @@ const Contact = () => {
       {/* Información de contacto */}
       <div className="contact-info text-center mb-5">
         <h1 className="mb-4">📞 Contáctanos</h1>
-        <p><strong>📌 Dirección:</strong> Calle 83 # 58 19, Itagüí, Antioquia</p>
+        <p><strong>📌 Dirección:</strong> Carrera 45 # 34 43, torre norte of. 601 Medellin, Antioquia</p>
         <p><strong>📞 Teléfonos:</strong> +57 3042174177 - +57 3053084389</p>
         <p><strong>✉ Email:</strong> contacto@ADFormalizaciónTributariaycontable.com</p>
       </div>
@@ -78,17 +77,21 @@ const Contact = () => {
       {/* Mapa */}
       <div className="map-container mb-5">
         <h2 className="text-center mb-3">🗺 Cómo llegar</h2>
+        <p className="text-center mb-3">
+          📍 Dirección: <strong>Almacentro, Torre Norte, Oficina 601, Medellín, Antioquia</strong>
+        </p>
         <iframe
-          title="Ubicación"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.876520166699!2d-75.61188538573657!3d6.170041795537196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46824b3fdf5ec7%3A0xa1ee6b5a7fa7b9fa!2sCalle%2083%20%23%2058-19%2C%20Itag%C3%BC%C3%AD%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1712685748850!5m2!1ses!2sco"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+  title="Ubicación"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.932427400055!2d-75.5757176!3d6.2351678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290037829c31%3A0x992de19205489454!2sCentro%20Comercial%20Almacentro!5e0!3m2!1ses-419!2sco!4v1617052211329!5m2!1ses-419!2sco"
+  width="100%"
+  height="400"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
       </div>
-    </div>
+    </div> // ← Este era el div que faltaba cerrar
   );
 };
 
